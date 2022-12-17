@@ -7,7 +7,11 @@ const emojiDictionary = {
   "🦬": "Bison",
   "🐗": "Boar",
   "🐺": "Wolf",
-  "🦦": "Otter"
+  "🦦": "Otter",
+  "🐪": "Camel",
+  "🦓": "Zebra",
+  "🦏": "Rhinoceros",
+  "🐘": "Elephant"
 };
 
 const emojisWeKnow = Object.keys(emojiDictionary);
@@ -17,7 +21,10 @@ export default function App() {
 
   function emojiInputHandler(event) {
     const userInput = event.target.value;
-    const meaning = emojiDictionary[userInput];
+    let meaning = emojiDictionary[userInput];
+    if (meaning === undefined) {
+      meaning = "No such emoji exist in our Database";
+    }
     setEmojiInput(meaning);
   }
 

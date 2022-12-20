@@ -1,2 +1,1 @@
-# Animals-emojis-interpreter
-Created with CodeSandbox
+This app helps you interpret the animal emojis.
